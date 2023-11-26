@@ -9,8 +9,8 @@ import java.util.List;
 
 public class CoordinateBuilder {
     List<CoordinateMatrix> matrix = new ArrayList<>();
-    int numRows;
-    int numCols;
+    public int numRows;
+    public int numCols;
 
     public List<CoordinateMatrix> matrixReader(String filePath) throws IOException {
         BufferedReader reader = new BufferedReader(new FileReader(filePath));

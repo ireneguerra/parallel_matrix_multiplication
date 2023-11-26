@@ -5,12 +5,12 @@ import org.example.matrix.DenseMatrix;
 public class SimpleMatrixMultiplication implements MatrixMultiplication{
     private final double[][] a;
     private final double[][] b;
-    private double[][] c;
+    private final double[][] c;
 
     public SimpleMatrixMultiplication(double[][] a, double[][] b) {
         this.a = a;
         this.b = b;
-        double[][] c = new double[a.length][a.length];
+        this.c = new double[a.length][a.length];
     }
     public void multiply() {
         assert a.length == b.length;
@@ -24,7 +24,7 @@ public class SimpleMatrixMultiplication implements MatrixMultiplication{
         }
     }
 
-    public DenseMatrix getResult() {
+    public DenseMatrix result() {
         return new DenseMatrix(c.length, c);
     }
 }

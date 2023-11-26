@@ -46,10 +46,10 @@ public class SparseMatrixMultiplication implements MatrixMultiplication{
 
             }
         }
-        sparseMatrix =  builder.toMatrix();
+        sparseMatrix = builder.toMatrix();
     }
 
-    public DenseMatrix getResult() {
+    public DenseMatrix result() {
         SparseToDenseMatrix denseConverter = new SparseToDenseMatrix();
         return denseConverter.convert(sparseMatrix);
     }

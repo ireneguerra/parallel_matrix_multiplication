@@ -6,21 +6,21 @@ import java.util.concurrent.ExecutorService;
 import java.util.concurrent.Executors;
 import java.util.concurrent.TimeUnit;
 
-public class TiledMatrixMultiplication implements MatrixMultiplication{
+public class ParallelMatrixMultiplication implements MatrixMultiplication{
 
-    private DenseMatrix a;
-    private DenseMatrix b;
-    private DenseMatrix c;
-    private int blockSize;
+    private final DenseMatrix a;
+    private final DenseMatrix b;
+    private final DenseMatrix c;
+    private final int blockSize;
 
-    private ExecutorService executor;
+    private final ExecutorService executor;
 
-    public TiledMatrixMultiplication(DenseMatrix a, DenseMatrix b, int blockSize)  {
+    public ParallelMatrixMultiplication(DenseMatrix a, DenseMatrix b, int blockSize)  {
         this.a = a;
         this.b = b;
         this.blockSize = blockSize;
         this.c = new DenseMatrix(a.getSize(), new double[a.getSize()][a.getSize()]);
-        this.executor = Executors.newFixedThreadPool(Runtime.getRuntime().availableProcessors());
+        this.executor = Executors.newFixedThreadPool(16);
     }
 
     public void multiply() {
@@ -58,7 +58,7 @@ public class TiledMatrixMultiplication implements MatrixMultiplication{
         }
     }
 
-    public DenseMatrix getResult() {
+    public DenseMatrix result() {
         return c;
     }
 }
