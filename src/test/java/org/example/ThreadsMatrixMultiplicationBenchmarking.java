@@ -15,7 +15,7 @@ import java.util.concurrent.TimeUnit;
 @Measurement(iterations = 1, time = 10, timeUnit = TimeUnit.SECONDS)
 @Timeout(time = 10, timeUnit = TimeUnit.MINUTES)
 @Threads(1)
-public class ParallelMatrixMultiplicationBenchmarking {
+public class ThreadsMatrixMultiplicationBenchmarking {
 
     @State(Scope.Thread)
     public static class Operands{
