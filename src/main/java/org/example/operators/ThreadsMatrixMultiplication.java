@@ -6,7 +6,7 @@ import java.util.concurrent.ExecutorService;
 import java.util.concurrent.Executors;
 import java.util.concurrent.TimeUnit;
 
-public class ParallelMatrixMultiplication implements MatrixMultiplication{
+public class ThreadsMatrixMultiplication implements MatrixMultiplication{
 
     private final DenseMatrix a;
     private final DenseMatrix b;
@@ -15,14 +15,14 @@ public class ParallelMatrixMultiplication implements MatrixMultiplication{
 
     private final ExecutorService executor;
 
-    public ParallelMatrixMultiplication(DenseMatrix a, DenseMatrix b, int blockSize)  {
+    public ThreadsMatrixMultiplication(DenseMatrix a, DenseMatrix b, int blockSize)  {
         this.a = a;
         this.b = b;
         this.blockSize = blockSize;
         this.c = new DenseMatrix(a.getSize(), new double[a.getSize()][a.getSize()]);
-        this.executor = Executors.newFixedThreadPool(16);
+        this.executor = Executors.newFixedThreadPool(Runtime.getRuntime().availableProcessors());
     }
-
+    @Override
     public void multiply() {
         int size = a.getSize();
         try {
@@ -38,7 +38,7 @@ public class ParallelMatrixMultiplication implements MatrixMultiplication{
             }
 
             executor.shutdown();
-            executor.awaitTermination(1000, TimeUnit.SECONDS);
+            executor.awaitTermination(Long.MAX_VALUE, TimeUnit.SECONDS);
         } catch (InterruptedException e) {
             Thread.currentThread().interrupt();
         }
@@ -57,7 +57,7 @@ public class ParallelMatrixMultiplication implements MatrixMultiplication{
             }
         }
     }
-
+    @Override
     public DenseMatrix result() {
         return c;
     }

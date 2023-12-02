@@ -12,6 +12,7 @@ public class SimpleMatrixMultiplication implements MatrixMultiplication{
         this.b = b;
         this.c = new double[a.length][a.length];
     }
+    @Override
     public void multiply() {
         assert a.length == b.length;
         int n = a.length;
@@ -24,6 +25,7 @@ public class SimpleMatrixMultiplication implements MatrixMultiplication{
         }
     }
 
+    @Override
     public DenseMatrix result() {
         return new DenseMatrix(c.length, c);
     }

@@ -16,6 +16,7 @@ public class SparseMatrixMultiplication implements MatrixMultiplication{
         this.a = a;
         this.b = b;
     }
+    @Override
     public void multiply(){
         SparseMatrixBuilder builder = new SparseMatrixBuilder(a.getSize());
 
@@ -48,7 +49,7 @@ public class SparseMatrixMultiplication implements MatrixMultiplication{
         }
         sparseMatrix = builder.toMatrix();
     }
-
+    @Override
     public DenseMatrix result() {
         SparseToDenseMatrix denseConverter = new SparseToDenseMatrix();
         return denseConverter.convert(sparseMatrix);

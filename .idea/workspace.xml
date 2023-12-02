@@ -4,29 +4,12 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="ecb90d19-796b-45be-944d-dc69beb0626b" name="Changes" comment="v0">
-      <change afterPath="$PROJECT_DIR$/src/test/java/org/example/ParallelMatrixMultiplicationBenchmarking.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/org/example/SimpleMatrixMultiplicationBenchmarking.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/org/example/SparseMatrixMultiplicationBenchmarking.java" afterDir="false" />
+    <list default="true" id="ecb90d19-796b-45be-944d-dc69beb0626b" name="Changes" comment="Test classes added">
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/example/operators/StreamsMatrixMultiplication.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/Controller.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/Controller.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/org/example/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/Main.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/matrixbuilders/CoordinateBuilder.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/matrixbuilders/CoordinateBuilder.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/operators/MatrixMultiplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/operators/MatrixMultiplication.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/operators/SimpleMatrixMultiplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/operators/SimpleMatrixMultiplication.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/operators/SparseMatrixMultiplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/operators/SparseMatrixMultiplication.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/operators/TiledMatrixMultiplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/operators/ParallelMatrixMultiplication.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/1138_bus.mtx" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/testmatrix/1138_bus.mtx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/arc130.mtx" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/testmatrix/arc130.mtx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/bcsstk05.mtx" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/testmatrix/bcsstk05.mtx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/bcsstk12.mtx" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/testmatrix/bcsstk12.mtx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/bcsstk22.mtx" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/testmatrix/bcsstk22.mtx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/bcsstm11.mtx" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/testmatrix/bcsstm11.mtx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/bcsstm12.mtx" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/testmatrix/bcsstm12.mtx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/bcsstm22.mtx" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/testmatrix/bcsstm22.mtx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/usps_norm_5NN.mtx" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/testmatrix/usps_norm_5NN.mtx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/TiledMatrixMultiplicationBenchmarking.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/operators/ParallelMatrixMultiplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/operators/ThreadsMatrixMultiplication.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/org/example/ParallelMatrixMultiplicationBenchmarking.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/org/example/ParallelMatrixMultiplicationBenchmarking.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -65,17 +48,17 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
-    "last_opened_file_path": "C:/Users/irene/Desktop/jhmcode/jmh-project (1)",
-    "project.structure.last.edited": "Modules",
-    "project.structure.proportion": "0.0",
-    "project.structure.side.proportion": "0.0"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
+    &quot;last_opened_file_path&quot;: &quot;C:/Users/irene/Desktop/big-data-java-main/parallel_matrix_multiplication&quot;,
+    &quot;project.structure.last.edited&quot;: &quot;Modules&quot;,
+    &quot;project.structure.proportion&quot;: &quot;0.0&quot;,
+    &quot;project.structure.side.proportion&quot;: &quot;0.0&quot;
   }
-}]]></component>
+}</component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
       <recent name="C:\Users\irene\Desktop\big-data-java-main\parallel_matrix_multiplication\src\main\resources" />
@@ -88,7 +71,7 @@
       <recent name="org.example" />
     </key>
   </component>
-  <component name="RunManager" selected="Jmh.SparseMatrixMultiplicationBenchmarking.multiplication$">
+  <component name="RunManager">
     <configuration name="ParallelMatrixMultiplicationBenchmarking.multiplication$" type="jmh-id" temporary="true" program-parameters="org.example.ParallelMatrixMultiplicationBenchmarking.multiplication$" working-dir="$MODULE_WORKING_DIR$" benchmark-type="METHOD" benchmark-class="org.example.ParallelMatrixMultiplicationBenchmarking" isAlternativeJrePathEnabled="false">
       <module name="parallel_matrix_multiplication" />
       <method v="2">
@@ -131,7 +114,14 @@
       <option name="project" value="LOCAL" />
       <updated>1701020752206</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="Test classes added">
+      <created>1701038890543</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1701038890543</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -147,6 +137,7 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="v0" />
-    <option name="LAST_COMMIT_MESSAGE" value="v0" />
+    <MESSAGE value="Test classes added" />
+    <option name="LAST_COMMIT_MESSAGE" value="Test classes added" />
   </component>
 </project>

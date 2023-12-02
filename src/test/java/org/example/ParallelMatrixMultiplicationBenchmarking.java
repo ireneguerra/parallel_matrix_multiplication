@@ -2,7 +2,7 @@ package org.example;
 import org.example.matrix.CoordinateMatrix;
 import org.example.matrix.DenseMatrix;
 import org.example.matrixconverters.CoordinateToDense;
-import org.example.operators.ParallelMatrixMultiplication;
+import org.example.operators.ThreadsMatrixMultiplication;
 import org.openjdk.jmh.annotations.*;
 
 import java.util.List;
@@ -31,14 +31,13 @@ public class ParallelMatrixMultiplicationBenchmarking {
             CoordinateToDense converter = new CoordinateToDense();
             a = converter.convertToDenseMatrix(matrix, matrix_size);
             b = converter.convertToDenseMatrix(matrix, matrix_size);
-
         }
 
     }
 
     @Benchmark
     public void multiplication(Operands operands){
-        new ParallelMatrixMultiplication(operands.a, operands.b, operands.block_size).multiply();
+        new ThreadsMatrixMultiplication(operands.a, operands.b, operands.block_size).multiply();
     }
 }
 
