@@ -18,7 +18,8 @@ import java.util.concurrent.TimeUnit;
 public class StreamsMatrixMultiplicationBenchmarking {
     @State(Scope.Thread)
     public static class Operands{
-        private int block_size = 64;
+        @Param({"32", "64", "128"})
+        private int block_size;
         private DenseMatrix a;
         private DenseMatrix b;
 

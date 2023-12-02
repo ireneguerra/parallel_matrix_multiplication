@@ -4,12 +4,10 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="ecb90d19-796b-45be-944d-dc69beb0626b" name="Changes" comment="StreamsMatrixMultiplication class added">
-      <change afterPath="$PROJECT_DIR$/src/test/java/org/example/MatrixMultiplicationTest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/org/example/StreamsMatrixMultiplicationBenchmarking.java" afterDir="false" />
+    <list default="true" id="ecb90d19-796b-45be-944d-dc69beb0626b" name="Changes" comment="Test class added">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/org/example/ParallelMatrixMultiplicationBenchmarking.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/org/example/ThreadsMatrixMultiplicationBenchmarking.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/org/example/StreamsMatrixMultiplicationBenchmarking.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/org/example/StreamsMatrixMultiplicationBenchmarking.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/org/example/ThreadsMatrixMultiplicationBenchmarking.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/org/example/ThreadsMatrixMultiplicationBenchmarking.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -71,7 +69,7 @@
       <recent name="org.example" />
     </key>
   </component>
-  <component name="RunManager">
+  <component name="RunManager" selected="Jmh.StreamsMatrixMultiplicationBenchmarking.multiplication$">
     <configuration name="ParallelMatrixMultiplicationBenchmarking.multiplication$" type="jmh-id" temporary="true" program-parameters="org.example.ParallelMatrixMultiplicationBenchmarking.multiplication$" working-dir="$MODULE_WORKING_DIR$" benchmark-type="METHOD" benchmark-class="org.example.ParallelMatrixMultiplicationBenchmarking" isAlternativeJrePathEnabled="false">
       <module name="parallel_matrix_multiplication" />
       <method v="2">
@@ -90,8 +88,15 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration name="StreamsMatrixMultiplicationBenchmarking.multiplication$" type="jmh-id" temporary="true" program-parameters="org.example.StreamsMatrixMultiplicationBenchmarking.multiplication$" working-dir="$MODULE_WORKING_DIR$" benchmark-type="METHOD" benchmark-class="org.example.StreamsMatrixMultiplicationBenchmarking" isAlternativeJrePathEnabled="false">
+      <module name="parallel_matrix_multiplication" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Jmh.StreamsMatrixMultiplicationBenchmarking.multiplication$" />
         <item itemvalue="Jmh.SparseMatrixMultiplicationBenchmarking.multiplication$" />
         <item itemvalue="Jmh.SimpleMatrixMultiplicationBenchmarking.multiplication$" />
         <item itemvalue="Jmh.ParallelMatrixMultiplicationBenchmarking.multiplication$" />
@@ -128,7 +133,14 @@
       <option name="project" value="LOCAL" />
       <updated>1701540805182</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="Test class added">
+      <created>1701542754219</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1701542754219</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -146,6 +158,7 @@
     <MESSAGE value="v0" />
     <MESSAGE value="Test classes added" />
     <MESSAGE value="StreamsMatrixMultiplication class added" />
-    <option name="LAST_COMMIT_MESSAGE" value="StreamsMatrixMultiplication class added" />
+    <MESSAGE value="Test class added" />
+    <option name="LAST_COMMIT_MESSAGE" value="Test class added" />
   </component>
 </project>
