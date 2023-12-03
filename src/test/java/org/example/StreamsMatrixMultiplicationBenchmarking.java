@@ -18,15 +18,13 @@ import java.util.concurrent.TimeUnit;
 public class StreamsMatrixMultiplicationBenchmarking {
     @State(Scope.Thread)
     public static class Operands{
-        @Param({"32", "64", "128"})
-        private int block_size;
         private DenseMatrix a;
         private DenseMatrix b;
 
         @Setup
         public void setup() {
             Controller controller = new Controller();
-            List<CoordinateMatrix> matrix = controller.readMatrix("src\\main\\resources\\testmatrix\\1138_bus.mtx");
+            List<CoordinateMatrix> matrix = controller.readMatrix("src\\main\\resources\\testmatrix\\bcsstk12.mtx");
             int matrix_size = controller.getMatrixSize();
             CoordinateToDense converter = new CoordinateToDense();
             a = converter.convertToDenseMatrix(matrix, matrix_size);
@@ -36,8 +34,8 @@ public class StreamsMatrixMultiplicationBenchmarking {
     }
 
         @Benchmark
-        public void multiplication(StreamsMatrixMultiplicationBenchmarking.Operands operands){
-            new StreamsMatrixMultiplication(operands.a, operands.b, operands.block_size).multiply();
+        public void multiplication(Operands operands){
+            new StreamsMatrixMultiplication(operands.a, operands.b).multiply();
         }
     }
 

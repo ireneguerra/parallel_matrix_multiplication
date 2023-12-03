@@ -4,8 +4,21 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="ecb90d19-796b-45be-944d-dc69beb0626b" name="Changes" comment="Test class added">
+    <list default="true" id="ecb90d19-796b-45be-944d-dc69beb0626b" name="Changes" comment="Some blocksizes in test added">
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/example/operators/TiledMatrixMultiplication.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/org/example/TiledMatrixMultiplicationBenchmarking.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/Controller.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/Controller.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/Main.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/operators/StreamsMatrixMultiplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/operators/StreamsMatrixMultiplication.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/operators/ThreadsMatrixMultiplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/operators/ThreadsMatrixMultiplication.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/testmatrix/bcsstk22.mtx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/testmatrix/bcsstm11.mtx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/testmatrix/bcsstm12.mtx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/testmatrix/bcsstm22.mtx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/org/example/MatrixMultiplicationTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/org/example/MatrixMultiplicationTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/org/example/SimpleMatrixMultiplicationBenchmarking.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/org/example/SimpleMatrixMultiplicationBenchmarking.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/org/example/SparseMatrixMultiplicationBenchmarking.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/org/example/SparseMatrixMultiplicationBenchmarking.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/java/org/example/StreamsMatrixMultiplicationBenchmarking.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/org/example/StreamsMatrixMultiplicationBenchmarking.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/java/org/example/ThreadsMatrixMultiplicationBenchmarking.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/org/example/ThreadsMatrixMultiplicationBenchmarking.java" afterDir="false" />
     </list>
@@ -36,6 +49,9 @@
   </component>
   <component name="MarkdownSettingsMigration">
     <option name="stateVersion" value="1" />
+  </component>
+  <component name="ProblemsViewState">
+    <option name="selectedTabId" value="CurrentFile" />
   </component>
   <component name="ProjectCodeStyleSettingsMigration">
     <option name="version" value="2" />
@@ -69,13 +85,7 @@
       <recent name="org.example" />
     </key>
   </component>
-  <component name="RunManager" selected="Jmh.StreamsMatrixMultiplicationBenchmarking.multiplication$">
-    <configuration name="ParallelMatrixMultiplicationBenchmarking.multiplication$" type="jmh-id" temporary="true" program-parameters="org.example.ParallelMatrixMultiplicationBenchmarking.multiplication$" working-dir="$MODULE_WORKING_DIR$" benchmark-type="METHOD" benchmark-class="org.example.ParallelMatrixMultiplicationBenchmarking" isAlternativeJrePathEnabled="false">
-      <module name="parallel_matrix_multiplication" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
+  <component name="RunManager">
     <configuration name="SimpleMatrixMultiplicationBenchmarking.multiplication$" type="jmh-id" temporary="true" program-parameters="org.example.SimpleMatrixMultiplicationBenchmarking.multiplication$" working-dir="$MODULE_WORKING_DIR$" benchmark-type="METHOD" benchmark-class="org.example.SimpleMatrixMultiplicationBenchmarking" isAlternativeJrePathEnabled="false">
       <module name="parallel_matrix_multiplication" />
       <method v="2">
@@ -94,12 +104,25 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration name="ThreadsMatrixMultiplicationBenchmarking.multiplication$" type="jmh-id" temporary="true" program-parameters="org.example.ThreadsMatrixMultiplicationBenchmarking.multiplication$" working-dir="$MODULE_WORKING_DIR$" benchmark-type="METHOD" benchmark-class="org.example.ThreadsMatrixMultiplicationBenchmarking" isAlternativeJrePathEnabled="false">
+      <module name="parallel_matrix_multiplication" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="TiledMatrixMultiplicationBenchmarking.multiplication$" type="jmh-id" temporary="true" program-parameters="org.example.TiledMatrixMultiplicationBenchmarking.multiplication$" working-dir="$MODULE_WORKING_DIR$" benchmark-type="METHOD" benchmark-class="org.example.TiledMatrixMultiplicationBenchmarking" isAlternativeJrePathEnabled="false">
+      <module name="parallel_matrix_multiplication" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Jmh.TiledMatrixMultiplicationBenchmarking.multiplication$" />
+        <item itemvalue="Jmh.ThreadsMatrixMultiplicationBenchmarking.multiplication$" />
         <item itemvalue="Jmh.StreamsMatrixMultiplicationBenchmarking.multiplication$" />
         <item itemvalue="Jmh.SparseMatrixMultiplicationBenchmarking.multiplication$" />
         <item itemvalue="Jmh.SimpleMatrixMultiplicationBenchmarking.multiplication$" />
-        <item itemvalue="Jmh.ParallelMatrixMultiplicationBenchmarking.multiplication$" />
       </list>
     </recent_temporary>
   </component>
@@ -140,7 +163,14 @@
       <option name="project" value="LOCAL" />
       <updated>1701542754219</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="Some blocksizes in test added">
+      <created>1701543552572</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1701543552572</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -159,6 +189,7 @@
     <MESSAGE value="Test classes added" />
     <MESSAGE value="StreamsMatrixMultiplication class added" />
     <MESSAGE value="Test class added" />
-    <option name="LAST_COMMIT_MESSAGE" value="Test class added" />
+    <MESSAGE value="Some blocksizes in test added" />
+    <option name="LAST_COMMIT_MESSAGE" value="Some blocksizes in test added" />
   </component>
 </project>

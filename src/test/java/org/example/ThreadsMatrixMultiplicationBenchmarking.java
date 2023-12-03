@@ -1,4 +1,5 @@
 package org.example;
+
 import org.example.matrix.CoordinateMatrix;
 import org.example.matrix.DenseMatrix;
 import org.example.matrixconverters.CoordinateToDense;
@@ -7,7 +8,6 @@ import org.openjdk.jmh.annotations.*;
 
 import java.util.List;
 import java.util.concurrent.TimeUnit;
-
 @BenchmarkMode(Mode.SingleShotTime)
 @OutputTimeUnit(TimeUnit.SECONDS)
 @Fork(value = 1)
@@ -16,10 +16,9 @@ import java.util.concurrent.TimeUnit;
 @Timeout(time = 10, timeUnit = TimeUnit.MINUTES)
 @Threads(1)
 public class ThreadsMatrixMultiplicationBenchmarking {
-
     @State(Scope.Thread)
     public static class Operands{
-        @Param({"32", "64", "128"})
+
         private int block_size;
         private DenseMatrix a;
         private DenseMatrix b;
@@ -27,7 +26,7 @@ public class ThreadsMatrixMultiplicationBenchmarking {
         @Setup
         public void setup() {
             Controller controller = new Controller();
-            List<CoordinateMatrix> matrix = controller.readMatrix("src\\main\\resources\\testmatrix\\1138_bus.mtx");
+            List<CoordinateMatrix> matrix = controller.readMatrix("src\\main\\resources\\testmatrix\\bcsstk12.mtx");
             int matrix_size = controller.getMatrixSize();
             CoordinateToDense converter = new CoordinateToDense();
             a = converter.convertToDenseMatrix(matrix, matrix_size);
@@ -38,16 +37,7 @@ public class ThreadsMatrixMultiplicationBenchmarking {
 
     @Benchmark
     public void multiplication(Operands operands){
-        new ThreadsMatrixMultiplication(operands.a, operands.b, operands.block_size).multiply();
+        new ThreadsMatrixMultiplication(operands.a, operands.b).multiply();
     }
 }
-
-
-
-
-
-
-
-
-
 

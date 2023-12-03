@@ -1,9 +1,8 @@
 package org.example;
-
 import org.example.matrix.CoordinateMatrix;
 import org.example.matrix.DenseMatrix;
 import org.example.matrixconverters.CoordinateToDense;
-import org.example.operators.SimpleMatrixMultiplication;
+import org.example.operators.TiledMatrixMultiplication;
 import org.openjdk.jmh.annotations.*;
 
 import java.util.List;
@@ -16,29 +15,40 @@ import java.util.concurrent.TimeUnit;
 @Measurement(iterations = 1, time = 10, timeUnit = TimeUnit.SECONDS)
 @Timeout(time = 10, timeUnit = TimeUnit.MINUTES)
 @Threads(1)
-public class SimpleMatrixMultiplicationBenchmarking {
+public class TiledMatrixMultiplicationBenchmarking {
+
     @State(Scope.Thread)
     public static class Operands{
-        private double[][] a;
-        private double[][] b;
+        //@Param({"1", "2", "4", "8", "16", "32", "64", "128", "256"})
+        private int block_size;
+        private DenseMatrix a;
+        private DenseMatrix b;
 
         @Setup
         public void setup() {
             Controller controller = new Controller();
-            List<CoordinateMatrix> matrix = controller.readMatrix("src\\main\\resources\\testmatrix\\bcsstk12.mtx");
+            List<CoordinateMatrix> matrix = controller.readMatrix("src\\main\\resources\\testmatrix\\1138_bus.mtx");
             int matrix_size = controller.getMatrixSize();
             CoordinateToDense converter = new CoordinateToDense();
-            DenseMatrix denseMatrix = converter.convertToDenseMatrix(matrix, matrix_size);
-            a = denseMatrix.getMatrix();
-            b = denseMatrix.getMatrix();
-
+            a = converter.convertToDenseMatrix(matrix, matrix_size);
+            b = converter.convertToDenseMatrix(matrix, matrix_size);
+            block_size = matrix_size/Runtime.getRuntime().availableProcessors();
         }
 
     }
 
     @Benchmark
     public void multiplication(Operands operands){
-        new SimpleMatrixMultiplication(operands.a, operands.b).multiply();
+        new TiledMatrixMultiplication(operands.a, operands.b, operands.block_size).multiply();
     }
 }
+
+
+
+
+
+
+
+
+
 

@@ -22,4 +22,3 @@ public class Controller {
         return reader.numRows;
     }
 }
-
