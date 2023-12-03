@@ -24,7 +24,7 @@ public class StreamsMatrixMultiplicationBenchmarking {
         @Setup
         public void setup() {
             Controller controller = new Controller();
-            List<CoordinateMatrix> matrix = controller.readMatrix("src\\main\\resources\\testmatrix\\bcsstk12.mtx");
+            List<CoordinateMatrix> matrix = controller.readMatrix("src\\main\\resources\\testmatrix\\gre_512.mtx");
             int matrix_size = controller.getMatrixSize();
             CoordinateToDense converter = new CoordinateToDense();
             a = converter.convertToDenseMatrix(matrix, matrix_size);

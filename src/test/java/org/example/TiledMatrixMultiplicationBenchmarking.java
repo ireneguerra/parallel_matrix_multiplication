@@ -19,7 +19,7 @@ public class TiledMatrixMultiplicationBenchmarking {
 
     @State(Scope.Thread)
     public static class Operands{
-        //@Param({"1", "2", "4", "8", "16", "32", "64", "128", "256"})
+        //@Param({"4", "8", "16", "32", "64", "93", "128", "256", "512"})
         private int block_size;
         private DenseMatrix a;
         private DenseMatrix b;
@@ -32,9 +32,12 @@ public class TiledMatrixMultiplicationBenchmarking {
             CoordinateToDense converter = new CoordinateToDense();
             a = converter.convertToDenseMatrix(matrix, matrix_size);
             b = converter.convertToDenseMatrix(matrix, matrix_size);
-            block_size = matrix_size/Runtime.getRuntime().availableProcessors();
+            if (matrix_size%Runtime.getRuntime().availableProcessors() == 0)
+                block_size = matrix_size/Runtime.getRuntime().availableProcessors();
+            else
+                block_size = matrix_size/Runtime.getRuntime().availableProcessors() + 1;
+            System.out.println("Block size: " + block_size);
         }
-
     }
 
     @Benchmark

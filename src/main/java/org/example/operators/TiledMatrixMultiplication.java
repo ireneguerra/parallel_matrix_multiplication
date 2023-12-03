@@ -13,6 +13,7 @@ public class TiledMatrixMultiplication implements MatrixMultiplication {
     private final int blockSize;
     private final ExecutorService executor;
 
+
     public TiledMatrixMultiplication(DenseMatrix a, DenseMatrix b, int blockSize) {
         this.a = a;
         this.b = b;

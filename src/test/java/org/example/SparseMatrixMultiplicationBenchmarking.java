@@ -28,7 +28,7 @@ public class SparseMatrixMultiplicationBenchmarking {
         @Setup
         public void setup() {
             Controller controller = new Controller();
-            List<CoordinateMatrix> matrix = controller.readMatrix("src\\main\\resources\\testmatrix\\bcsstk12.mtx");
+            List<CoordinateMatrix> matrix = controller.readMatrix("src\\main\\resources\\testmatrix\\lns_3937.mtx");
             CoordinateToCRS converterCRS = new CoordinateToCRS();
             a = converterCRS.convert(matrix);
             CoordinateToCCS converterCCS = new CoordinateToCCS();
