@@ -25,7 +25,7 @@ public class SimpleMatrixMultiplicationBenchmarking {
         @Setup
         public void setup() {
             Controller controller = new Controller();
-            List<CoordinateMatrix> matrix = controller.readMatrix("src\\main\\resources\\testmatrix\\bcsstk12.mtx");
+            List<CoordinateMatrix> matrix = controller.readMatrix("src\\main\\resources\\testmatrix\\bayer03.mtx");
             int matrix_size = controller.getMatrixSize();
             CoordinateToDense converter = new CoordinateToDense();
             DenseMatrix denseMatrix = converter.convertToDenseMatrix(matrix, matrix_size);

@@ -4,16 +4,10 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="ecb90d19-796b-45be-944d-dc69beb0626b" name="Changes" comment="v1">
-      <change afterPath="$PROJECT_DIR$/src/main/resources/testmatrix/gre_512.mtx" afterDir="false" />
+    <list default="true" id="ecb90d19-796b-45be-944d-dc69beb0626b" name="Changes" comment="v1.1">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/operators/TiledMatrixMultiplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/operators/TiledMatrixMultiplication.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/testmatrix/bcsstk05.mtx" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/java/org/example/MatrixMultiplicationTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/org/example/MatrixMultiplicationTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/org/example/SparseMatrixMultiplicationBenchmarking.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/org/example/SparseMatrixMultiplicationBenchmarking.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/org/example/StreamsMatrixMultiplicationBenchmarking.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/org/example/StreamsMatrixMultiplicationBenchmarking.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/org/example/ThreadsMatrixMultiplicationBenchmarking.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/org/example/ThreadsMatrixMultiplicationBenchmarking.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/org/example/TiledMatrixMultiplicationBenchmarking.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/org/example/TiledMatrixMultiplicationBenchmarking.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/org/example/SimpleMatrixMultiplicationBenchmarking.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/org/example/SimpleMatrixMultiplicationBenchmarking.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -111,8 +105,8 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="Jmh.TiledMatrixMultiplicationBenchmarking.multiplication$" />
         <item itemvalue="Jmh.SimpleMatrixMultiplicationBenchmarking.multiplication$" />
+        <item itemvalue="Jmh.TiledMatrixMultiplicationBenchmarking.multiplication$" />
         <item itemvalue="Jmh.SparseMatrixMultiplicationBenchmarking.multiplication$" />
         <item itemvalue="Jmh.StreamsMatrixMultiplicationBenchmarking.multiplication$" />
         <item itemvalue="Jmh.ThreadsMatrixMultiplicationBenchmarking.multiplication$" />
@@ -170,7 +164,21 @@
       <option name="project" value="LOCAL" />
       <updated>1701566173987</updated>
     </task>
-    <option name="localTasksCounter" value="7" />
+    <task id="LOCAL-00007" summary="v1.1">
+      <created>1701620769003</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1701620769003</updated>
+    </task>
+    <task id="LOCAL-00008" summary="v1.1">
+      <created>1701620774751</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1701620774751</updated>
+    </task>
+    <option name="localTasksCounter" value="9" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -191,6 +199,7 @@
     <MESSAGE value="Test class added" />
     <MESSAGE value="Some blocksizes in test added" />
     <MESSAGE value="v1" />
-    <option name="LAST_COMMIT_MESSAGE" value="v1" />
+    <MESSAGE value="v1.1" />
+    <option name="LAST_COMMIT_MESSAGE" value="v1.1" />
   </component>
 </project>

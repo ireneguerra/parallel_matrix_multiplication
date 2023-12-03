@@ -2,15 +2,17 @@ package org.example;
 
 import org.example.operators.*;
 import org.example.matrix.DenseMatrix;
-import org.junit.Test;
+import org.junit.jupiter.api.RepeatedTest;
+import org.junit.jupiter.api.TestInstance;
+
 import java.util.Random;
 
 
 import static org.junit.jupiter.api.Assertions.assertTrue;
-
+@TestInstance(TestInstance.Lifecycle.PER_METHOD)
 public class MatrixMultiplicationTest {
 
-    @Test
+    @RepeatedTest(10)
     public void testTiledMatrixMultiplication() {
         int matrixSize = 1024;
         int blockSize = 64;
@@ -27,7 +29,7 @@ public class MatrixMultiplicationTest {
         DenseMatrix result2 = multiplication2.result();
         assertTrue(matricesAreEqual(result1, result2));
     }
-    @Test
+    @RepeatedTest(10)
     public void testThreadsMatrixMultiplication() {
         int matrixSize = 1024;
 
@@ -44,7 +46,7 @@ public class MatrixMultiplicationTest {
         assertTrue(matricesAreEqual(result1, result2));
     }
 
-    @Test
+    @RepeatedTest(10)
     public void testStreamsMatrixMultiplication() {
         int matrixSize = 1024;
 
